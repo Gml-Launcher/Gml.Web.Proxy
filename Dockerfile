@@ -7,11 +7,11 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["/Gml.Web.Proxy.csproj", "src/Gml.Web.Proxy/"]
+COPY ["Gml.Web.Proxy.csproj", "src/Gml.Web.Proxy/"]
 RUN dotnet restore "src/Gml.Web.Proxy/Gml.Web.Proxy.csproj"
 COPY . .
 WORKDIR "/src/Gml.Web.Proxy"
-RUN dotnet build "./Gml.Web.Proxy.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "Gml.Web.Proxy.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
