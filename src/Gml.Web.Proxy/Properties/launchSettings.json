@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Gml.Web.Proxy": {
+    "https": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
