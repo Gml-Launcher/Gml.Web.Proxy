@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.35906.104 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gml.Web.Proxy", "src\Gml.Web.Proxy\Gml.Web.Proxy.csproj", "{4DACAFF0-F51A-FC88-01C2-90DEBB55A7CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{6C3BA664-2221-4E3F-9025-6F292786B376}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DACAFF0-F51A-FC88-01C2-90DEBB55A7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DACAFF0-F51A-FC88-01C2-90DEBB55A7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DACAFF0-F51A-FC88-01C2-90DEBB55A7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DACAFF0-F51A-FC88-01C2-90DEBB55A7CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF323760-4B98-4B8A-892B-AB2E584F3524}
+	EndGlobalSection
+EndGlobal
