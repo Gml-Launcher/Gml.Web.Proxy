@@ -22,7 +22,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 // Custom middleware: redirect /mnt to frontend when installed
 app.UseMiddleware<MntRedirectMiddleware>();
