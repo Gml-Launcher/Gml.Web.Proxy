@@ -24,10 +24,15 @@ if (app.Environment.IsDevelopment())
 
 // app.UseHttpsRedirection();
 
-// Custom middleware: redirect /mnt to frontend when installed
-app.UseMiddleware<MntRedirectMiddleware>();
-
 // Map reverse proxy to handle incoming requests according to config
-app.MapReverseProxy();
+app.MapReverseProxy(builder =>
+{
+    // Custom middleware: return health info
+    builder.UseMiddleware<HealthInfoMiddleware>();
+
+    // Custom middleware: redirect /mnt to frontend when installed
+    builder.UseMiddleware<MntRedirectMiddleware>();
+});
+
 
 app.Run();
