@@ -16,7 +16,6 @@ public class HealthInfoMiddleware
 
     public async Task InvokeAsync(HttpContext context)
     {
-        var data = context.GetReverseProxyFeature();
         var path = context.Request.Path;
         if (_stateLookup.TryGetCluster("backend", out var cluster))
         {
@@ -32,6 +31,13 @@ public class HealthInfoMiddleware
 
                 context.Response.StatusCode = StatusCodes.Status307TemporaryRedirect;
                 context.Response.Headers.Location = "/wait";
+                return;
+            }
+
+            if (destination.Health.Active == DestinationHealth.Healthy && path == "/wait")
+            {
+                context.Response.StatusCode = StatusCodes.Status307TemporaryRedirect;
+                context.Response.Headers.Location = "/";
                 return;
             }
         }
