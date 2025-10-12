@@ -9,6 +9,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<GmlWebClientStateManager>();
 
+// add memory cache
+builder.Services.AddMemoryCache();
+
 // Add YARP Reverse Proxy from configuration section "ReverseProxy"
 builder.Services.AddReverseProxy()
     .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"));
