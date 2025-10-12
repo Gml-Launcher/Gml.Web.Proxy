@@ -20,7 +20,7 @@ public class MntRedirectMiddleware
     {
         var data = context.GetReverseProxyFeature();
 
-        if (_stateLookup.TryGetCluster("backend", out var cluster) && data.Cluster.Config.ClusterId == "backend")
+        if (_stateLookup.TryGetCluster("backend", out var cluster))
         {
             var destination = cluster.Destinations.First().Value;
 
