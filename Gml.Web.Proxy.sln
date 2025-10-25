@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{6C3BA664-2221-4E3F-9025-6F292786B376}"
 	ProjectSection(SolutionItems) = preProject
 		Dockerfile = Dockerfile
+		.github\workflows\docker-publish.yml = .github\workflows\docker-publish.yml
 	EndProjectSection
 EndProject
 Global
